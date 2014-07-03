@@ -16,22 +16,14 @@ import javax.persistence.criteria.CriteriaBuilder
  * To change this template use File | Settings | File Templates.
  */
 @Service
-@Transactional
+@Transactional(readOnly = true)
 class PersistanceService {
 
     @Autowired
     private SessionFactory sessionFactory
 
-    public void save(Object entity){
-        getCurrentSession().save(entity)
-    }
-
-    public void delete(Object entity){
-        getCurrentSession().delete(entity)
-    }
-
-    public void update(Object entity){
-        getCurrentSession().update(entity)
+    public List<Object> list(Class clazz){
+        return getCurrentSession().createCriteria(clazz).list()
     }
 
     public Object findById(Class clazz, Long entityId){

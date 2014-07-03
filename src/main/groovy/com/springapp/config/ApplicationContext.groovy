@@ -22,8 +22,8 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver
  */
 @Configuration
 @EnableWebMvc
-@Import([HibernateConfig.class])
-@ComponentScan(basePackages = ["com.springapp.controller"])
+@Import([ReactorConfig.class,HibernateConfig.class])
+@ComponentScan(basePackages = ["com.springapp"])
 public class ApplicationContext extends WebMvcConfigurerAdapter {
 
 

@@ -19,9 +19,12 @@ class Person implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long id;
+    Long id;
 
     @Column
-    public String name
+    String name
+
+    @Column
+    int age
 
 }

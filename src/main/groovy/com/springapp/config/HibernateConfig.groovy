@@ -23,7 +23,6 @@ import javax.annotation.Resource
 @Configuration
 @EnableTransactionManagement(proxyTargetClass  = true)
 @PropertySource("classpath:hibernate.properties")
-@ComponentScan(basePackages = ["com.springapp"])
 class HibernateConfig {
 
     private static final String PROPERTY_NAME_DATABASE_DRIVER = "db.driver";

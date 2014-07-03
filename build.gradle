@@ -8,6 +8,7 @@ apply plugin: 'idea'
 
 repositories {
     mavenCentral()
+    maven { url 'http://repo.springsource.org/libs-release' }
 }
 
 
@@ -33,6 +34,8 @@ dependencies {
     compile "org.hibernate:hibernate-core:4.2.7.Final"
     compile "org.hibernate:hibernate-entitymanager:4.2.7.Final"
     compile "org.javassist:javassist:3.18.0-GA"
+    compile "org.projectreactor:reactor-core:1.1.2.RELEASE"
+
 
     testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
     testCompile "org.springframework:spring-test:${springVersion}"
